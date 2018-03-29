@@ -91,8 +91,6 @@ class QLearner(object):
                         future_reward = current_state - ahead_value
                 reward.append(immediate_reward + self.gamma * future_reward)
                 node_visited.append(i)
-            print(node_visited)
-            print(reward)
             action = node_visited[np.argmax(reward)]
             print("Action Taken ,",action)
         # Take the action and update the portfolio            
